@@ -1,0 +1,6 @@
+# O2
+
+## O2 interactive mode
+```
+srun --pty -p interactive -c 8 --mem 128G -t 0-12:00 /bin/bash
+```
