@@ -4,3 +4,7 @@
 ```
 srun --pty -p interactive -c 8 --mem 128G -t 0-12:00 /bin/bash
 ```
+
+# ERIS interactive mode
+bsub -Is -q interactive /bin/bash
+bsub -Is -q interactive -R 'rusage[mem=64000]' /bin/bash  
