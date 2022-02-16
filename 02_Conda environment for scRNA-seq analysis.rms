@@ -1,0 +1,12 @@
+# create conda environment
+conda create --name scrnaseq 
+
+# SoupX installation
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+conda install r-soupx
+conda search r-soupx --channel conda-forge
+
+# R installation
+
+# submit Rscript
