@@ -11,3 +11,12 @@ rm(y.list)
 str(scrna@meta.data)
 #saveRDS(scrna, file = sprintf("%s/MergedSeuratObjectHassan.rds", outdir))
 ```
+
+```{r message=FALSE, warning = FALSE}
+# add sample name
+scrna$treatment <- plyr::mapvalues(
+  x = scrna$orig.ident, 
+  from = samples, 
+  to = treatment
+)
+```
