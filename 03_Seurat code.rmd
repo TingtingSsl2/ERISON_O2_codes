@@ -1,0 +1,13 @@
+# Step4: Merge Seurat objects into an object
+```{r eval = FALSE, message=FALSE, warning = FALSE}
+scrna <- scrna.list[[1]]
+y.list=c()
+for(k in 2:length(samples)){
+  y.list=c(y.list, scrna.list[[k]])
+}
+scrna <- merge(scrna, y=y.list, add.cell.ids = samples, project=projectName)
+#rm(scrna.list)
+rm(y.list)
+str(scrna@meta.data)
+#saveRDS(scrna, file = sprintf("%s/MergedSeuratObjectHassan.rds", outdir))
+```
